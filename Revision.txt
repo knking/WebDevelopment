@@ -1,0 +1,57 @@
+inspect->memory->scroll down -> take snapshot->ctrl+f anf find variable here
+
+changing variable means we are changing the address of that varible in memory
+
+for example let name = "krishna" and this name addrees of @12345
+so if we change the value of name krishna to nand so in this case the address of that name will also change 
+ name= nand
+
+but in case of object we are declaring it as const and we are able to change the value of that object because when we change the value of object/updating the object value so in this case address of that object will not change that's why we are able to change the value of object 
+
+const myUser = {
+    firstname: "Krishna",
+    lastName: "Roy",
+    age:25,
+}
+
+myUSer["age"] = 34
+
+so now are will change to 35 but address of object will not change thats why we are able to change const
+
+but if we want ot change object directly then it will give you error
+example
+
+myUser = {}   here we want to change object so it will give error because we cannot change constant, and in this case object address will modify
+
+
+array and object copy
+method 1
+
+let ar =[1,2,"fhf"]
+
+let newAr = ar
+
+so if we do this then in this case both the array will point to the same memory address that's why when we change the value of array in one array then that change will reflect in both the array same case will apply in object also 
+
+we can use Object.assign(new object, old object) method for this, but is old method
+new method is spread operator
+
+so we can do this using 
+method 2
+
+const user2 = {...user1} this will work on array also
+
+let newArr = [...oldArr] 
+
+method 3
+
+we can use concate also
+
+let myfruits = [].concate(fruits)
+
+method 4
+const myfruits = fruits.slice()
+
+all above copy method is shallow copy so this will work only on 1 level 
+if there is nested object and array the this copy will not work properly and when we change the value of nested object in one object the value in other object will also change
+so to avoid this we need to use Deep Copy

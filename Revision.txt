@@ -55,3 +55,31 @@ const myfruits = fruits.slice()
 all above copy method is shallow copy so this will work only on 1 level 
 if there is nested object and array the this copy will not work properly and when we change the value of nested object in one object the value in other object will also change
 so to avoid this we need to use Deep Copy
+
+
+Hoisting
+
+when we are using the varible or funcation before it declaring then this concept is called Hoisting
+eg 
+clg(age)
+var age=45
+when we declare a varible using var and try to use this so it will not give you error, it will give us undefined becaue var is present in local 
+same if we define a funcation in normal way the we can also use this before declaration
+function hi() {
+    console.log('Hello');
+}
+
+but if we define funcation in another way then it will not follow hoisting concept and if we want to access that before declation then it will give you error
+let sayHi = function() {    //anonymous function
+    console.log('Hiii');
+}
+but if we use using var then we can acces it but in this case it will give you not a funcation error because the value of funcation useing var 
+keuword will be undefined
+
+scope
+we have two type of scope inside global scope
+1.window object
+2.Script scope
+
+when we  delcare var then it will go insdie window object
+when we declare varibale using const or let then it will go inside script scope

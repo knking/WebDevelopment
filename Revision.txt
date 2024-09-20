@@ -1,3 +1,15 @@
+How to take simple command line argument
+
+const args = process.argv.slice(2);
+
+
+How to print output in same line
+process.stdout.write("* ")
+
+
+
+
+
 inspect->memory->scroll down -> take snapshot->ctrl+f anf find variable here
 
 changing variable means we are changing the address of that varible in memory

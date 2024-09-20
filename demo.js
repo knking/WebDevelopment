@@ -1,17 +1,13 @@
-
-
-const  name1 = "krishna"
-
-function add(){
-    const name1 = "nand"
-    console.log(name1);
+const obj1 = {
+  name: "krishna",
+  age: 25,
+  address: {
+    city: "Noida",
+    state: "UP",
+  },
 }
 
-function sub(){
-    console.log(name1);
-}
-
-console.log(name1);
-add()
-console.log(name1);
-sub()
+const {name,age,address}=obj1
+console.log(name);
+console.log(age);
+console.log(address);

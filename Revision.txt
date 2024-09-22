@@ -95,3 +95,6 @@ we have two type of scope inside global scope
 
 when we  delcare var then it will go insdie window object
 when we declare varibale using const or let then it will go inside script scope
+
+
+

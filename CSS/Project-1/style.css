@@ -85,6 +85,7 @@ main{
 @media (max-width:850px){
     .card-containers{
         flex-direction: column;
+        max-width: 400px;
     }
     .card{
         width: unset;

@@ -1,0 +1,27 @@
+.square{
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    border: 25px solid green;
+}
+
+/* @media (orientation : portrait){
+.square{
+    background-color: blue;
+    border: 25px solid yellow;
+}
+} */
+
+/* @media (500px <= width <= 800px){
+    .square{
+        background-color: blue;
+        border: 25px solid yellow;
+    }
+    } */
+
+@media (min-width:700px){
+    .square{
+        background-color: blue;
+        border: 25px solid yellow;
+    }
+}

@@ -4,10 +4,11 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   
+    
+    /* align-items: center;
+    justify-content: center; */
+   
 
 }
 
@@ -16,7 +17,13 @@ a {
     text-decoration: none;
     display: inline-block;
 }
-
+main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
 .card-containers {
     color: white;
     margin: 1.5rem;
@@ -25,9 +32,17 @@ a {
     border-radius: 10px;
     overflow: hidden;
     max-width: 910px;
+    /* margin: auto; */
 }
 .card{
     padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.card img{
+    width: 64px;
+    height: 40px;
 }
 .card h2 {
     text-transform: uppercase;
@@ -40,12 +55,15 @@ a {
 .card p{
     opacity: 0.7;
     line-height: 1.75;
+    margin-bottom: 2.5rem;
 }
 .card a{
     border: 2px solid white;
     padding: 1em 2em;
     border-radius: 2em;
-    margin-top: 3rem;
+    margin-top: auto;
+    /* align-self: flex-start; */
+    margin-right: auto;
 }
 .organge-card {
     background-color: hsl(31, 77%, 52%);
@@ -63,3 +81,12 @@ a {
 
     */
 } 
+
+@media (max-width:850px){
+    .card-containers{
+        flex-direction: column;
+    }
+    .card{
+        width: unset;
+    }
+}

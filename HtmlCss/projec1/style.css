@@ -38,7 +38,7 @@ audio::-webkit-media-controls-panel{
 }
 .lakshmi-ganesh-section{
     background-color: #F99501;
-    padding-top: 1em;
+    padding-block: 1em;
     padding-inline: 1rem;
     
 }
@@ -79,21 +79,46 @@ audio::-webkit-media-controls-panel{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 .white-card{
     background-color: #fff;
-    max-width: 855px;
+    max-width: 500px;
     padding: 4rem;
     border-radius: 20px;
     display: inline-block;
 }
 .white-card p{
-    font-size: 32px;
+    font-size: 2rem;
     
 }
 .girlImg{
     width: 260px;
     margin-left: -5rem;
+}
+.lakshmi-ganesha-bottom-card{
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 4rem;
+    max-width: 772px;
+    display: flex;
+    margin-inline: auto;
+}
+.lakshmi-ganesha-bottom-card img{
+    width: 50%;
+   
+}
+.bottom-content{
+max-width: 900px;
+margin-inline: auto;
+width: 100%;
+}
+.bottom-content h2{
+    text-align: left;
+}
+.my-name{
+    text-align: right;
+    font-size: 14px;
 }
 @media (max-width:840px){
     .first-deepak{
@@ -112,7 +137,17 @@ audio::-webkit-media-controls-panel{
    .audio-container{
     /* max-width: max-content; */
    }
-   
+   .white-card p{
+    font-size:1.5rem;
+}
+.white-card{
+    padding-block: 1rem;
+    padding-left: 2rem;
+}
+.girlImg{
+    width: 160px;
+    
+}
 }
 
 @media (max-width:540px){
@@ -125,5 +160,11 @@ audio::-webkit-media-controls-panel{
     }
     .lakshmi-ganesh-section h2{
         font-size: 32px;
+    }
+    .white-card p{
+        font-size:1rem;
+    }
+    .lakshmi-ganesha-bottom-card{
+        padding: 2rem;
     }
 }

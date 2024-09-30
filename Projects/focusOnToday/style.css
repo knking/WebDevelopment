@@ -83,6 +83,7 @@ margin-block: 20px;
     border:2px solid rgba(0, 0, 0, 0.1) ;
     border-radius: 50%;
     flex-shrink: 0;
+    cursor: pointer;
 }
 .goal-input{
     padding-left: 15px;
@@ -128,5 +129,13 @@ margin-block: 20px;
         width: 90%;
        
     }
-  
+  .title{
+    margin-block: 15px;
+  }
+  .made-width{
+    margin-top: 34px;
+  }
+  .progress-bar{
+    height: 20px;
+  }
 }

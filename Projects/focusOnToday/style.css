@@ -46,6 +46,7 @@ main{
     height: 30px;
     background-color: rgba(72, 163, 0, 0.07);
     border-radius: 15px;
+    margin-bottom: 40px;
 }
 .progress-value{
     height: 100%;
@@ -60,9 +61,10 @@ main{
 }
 
 .error-label{
-font-size: 14px;
+font-size: 12px;
 color: #FF5151;
-margin-block: 20px;
+margin-top: 6px;
+display: none;
 
 }
 .goal-container{
@@ -125,6 +127,9 @@ margin-block: 20px;
 .completed .goal-input{
     color: #48A300;
     text-decoration-line: line-through;
+}
+.error-label{
+    
 }
 @media (max-width:768px){
     .title{

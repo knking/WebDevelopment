@@ -84,6 +84,9 @@ margin-block: 20px;
     border-radius: 50%;
     flex-shrink: 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .goal-input{
     padding-left: 15px;
@@ -93,6 +96,7 @@ margin-block: 20px;
     border: none;
     flex-grow: 1;
     align-self: stretch;
+    font-weight: 500;
 }
 .goal-input::placeholder{
     color: #D9D9D9;
@@ -107,6 +111,20 @@ margin-block: 20px;
     text-align: center;
     color: #858585;
     margin-top: 54px;
+}
+.check-icon{
+    display: none;
+}
+.completed .custom-checkbox{
+    background-color: #48A300;
+    border-color: #48A300;
+}
+.completed .check-icon{
+    display: block;
+}
+.completed .goal-input{
+    color: #48A300;
+    text-decoration-line: line-through;
 }
 @media (max-width:768px){
     .title{

@@ -60,6 +60,7 @@ main{
     color: #EEFFE0;
     
     overflow: hidden;
+    transition: width 0.2s ease-in-out;
 }
 .progress-value span{
     padding-left: 20px;

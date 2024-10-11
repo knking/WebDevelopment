@@ -115,7 +115,7 @@ main {
     gap: 15px;
 }
 .wrong{
-    display: block;
+    display: none;
 }
 .correct{
     display: none;
@@ -124,7 +124,7 @@ main {
 display: none;
 }
 .right-selection{
-display: block;
+display: none;
 }
 .next{
     font-weight: 600;
@@ -137,7 +137,15 @@ border-bottom: 1px solid navy;
 cursor: pointer;
 display: inline-block;
 }
-
+.new{
+    background-color: red;
+}
+.correctAns{
+    display: block;
+}
+.wrongAns{
+    display: block;
+}
 @media (max-width:710px){
     .question-section{
         padding-left: 20px;

@@ -7,6 +7,21 @@
     <script src="demo.js" defer></script>
 </head>
 <body>
-    <button class="next">Next</button>
+    <body>
+        <div class="quiz-container">
+          <h1>Sample Quiz</h1>
+          <div class="question">
+            <p id="question-text">Question 1: What is the capital of United Kingdom?</p>
+            <div class="choices">
+              <button class="choice" onclick="checkAnswer(0)">London</button>
+              <button class="choice" onclick="checkAnswer(1)">Paris</button>
+              <button class="choice" onclick="checkAnswer(2)">Nairobi</button>
+            </div>
+            <p id="feedback"></p>
+          </div>
+      
+        </div>
+        <script src="index.js"></script>
+      </body>
 </body>
 </html>

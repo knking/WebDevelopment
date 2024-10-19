@@ -107,19 +107,22 @@ const obj1 = [
   },
 ];
 
+const myArr= [...options]
+console.log(myArr);
+
 options.forEach((opt,index)=>{
     opt.addEventListener('click',(e)=>{
-        console.log(opt.childNodes[1].innerText);
-        console.log(opt.childNodes);
         
-        
-        if(opt.childNodes[1].innerText == "< Script>"){
+opt.style.border="2px solid red"
+      
+        if(opt.childNodes[1].innerText =="< Script>"){
             // rightText.style.display="block" 
             // rightImg.style.display="block" 
             // wrongText.style.display="none"
             // wrongImg.style.display="none"
-            opt.classList.add("correctAns")
+        
         } 
+  
     })
     })
     

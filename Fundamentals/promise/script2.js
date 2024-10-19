@@ -84,23 +84,52 @@
 //we can handle promise using async await also
 
 //we can send data from one promise to another promise using promise chaining
-const promiseFive = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let error = true;
-    if (!error) {
-      resolve({ uname: "knking", psd: 98765 });
-    } else {
-      reject("USert Not FOund");
-    }
-  }, 2000);
-});
+// const promiseFive = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     let error = true;
+//     if (!error) {
+//       resolve({ uname: "knking", psd: 98765 });
+//     } else {
+//       reject("USert Not FOund");
+//     }
+//   }, 2000);
+// });
 
-async function hanldePromiseFive() {
-  try {
-    const response = await promiseFive;
-    console.log(response);
-  } catch (error) {
-    console.log(error);
-  }
-}
-hanldePromiseFive();
+// async function hanldePromiseFive() {
+//   try {
+//     const response = await promiseFive;
+//     console.log(response);
+//   } catch (error) {
+//     console.log(error);
+
+//   }
+// }
+// hanldePromiseFive();
+
+//api call suing async await
+
+// async function getData() {
+//   try {
+//     const url = "https://jsonplaceholder.typicode.com/users";
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// getData();
+
+// api call using .then.catch
+const url = "https://jsonplaceholder.typicode.com/users";
+
+fetch(url)
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log("error");
+  });

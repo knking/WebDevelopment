@@ -14,6 +14,7 @@ function createUser(username, score){
     this.score = score
 }
 
+//we can write our own funcationality inside a function using prototype
 createUser.prototype.increment = function(){
     this.score++
 }
@@ -25,6 +26,8 @@ const chai = new createUser("chai", 25)
 const tea = createUser("tea", 250)
 
 chai.printMe()
+
+
 
 
 /*

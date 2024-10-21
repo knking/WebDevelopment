@@ -1,15 +1,4 @@
-const countriesContainer = document.querySelector(".countries-container")
-const countryCard=document.createElement("a")
-const img=document.createElement('img')
-const div=document.createElement('div')
-const h3=document.createElement('h3')
-const p=document.createElement('p')
-
-
-countryCard.classList.add('country-card')
-div.classList.add('card-text')
-h3.classList.add('card-title')
-
+const countriesContainer = document.querySelector(".countries-container");
 
 const url = "https://restcountries.com/v3.1/all";
 
@@ -30,18 +19,23 @@ fetch(url)
   })
   .then((data) => {
     data.forEach((country) => {
-        console.log(country.flags.svg);
-        img.src=`${country.flags.svg}`
-        h3.innertext=`${country.name.common}`
-        p.innerHTML=`<b> ${country.population}</b>`
-        div.appendChild(h3,p)
-        countryCard.appendChild(img,div)
-        countriesContainer.appendChild(countryCard)
-    document.body.append(countriesContainer)
+      const countryCard = document.createElement("a");
+      countryCard.classList.add("country-card");
+      const cardHTML = ` 
+                <img src="${country.flags.svg}" alt="flag">
+                <div class="card-text">
+                <h3 class="card-title">${country.name.common}</h3>
+                <p><b>Population: </b>${(country.population).toLocaleString('en-IN')}</p>
+                <p><b>Region: </b>${country.region}</p>
+                <p><b>Capital: </b>${country.capital}</p>
+                </div>`;
+                console.log(country.capital);
+                
+      countryCard.innerHTML = cardHTML;
+      countriesContainer.append(countryCard);
+      
     });
   })
   .catch((error) => {
     console.log(error);
   });
-
- 

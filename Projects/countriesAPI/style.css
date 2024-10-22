@@ -34,13 +34,17 @@ main{
 margin-top: 16px;
 margin-bottom: 64px;
 margin-left: 138px;
+display: flex;
+justify-content: space-between;
 }
 .search-container{
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
-    max-width: 400px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+    max-width: 360px;
+    width: 100%;
     border-radius: 4px;
     padding-left: 18px;
     color: #999;
+    overflow: hidden;
 }
 
 .search-container input{
@@ -48,7 +52,14 @@ margin-left: 138px;
     border: 0;
     padding: 16px;
 }
-
+.filter-by-name{
+    width: 150px;
+    padding: 0 16px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
 .countries-container{
     max-width: 1200px;
     margin-inline: auto;

@@ -21,6 +21,7 @@ fetch(url)
     data.forEach((country) => {
       const countryCard = document.createElement("a");
       countryCard.classList.add("country-card");
+      countryCard.href=`./country.html?name=${country.name.common}`
       const cardHTML = ` 
                 <img src="${country.flags.svg}" alt="flag">
                 <div class="card-text">

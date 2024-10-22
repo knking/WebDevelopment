@@ -30,6 +30,25 @@ a{
 main{
     padding: 24px;
 }
+.search-filter-container{
+margin-top: 16px;
+margin-bottom: 64px;
+margin-left: 138px;
+}
+.search-container{
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    border-radius: 4px;
+    padding-left: 18px;
+    color: #999;
+}
+
+.search-container input{
+    outline: none;
+    border: 0;
+    padding: 16px;
+}
+
 .countries-container{
     max-width: 1200px;
     margin-inline: auto;

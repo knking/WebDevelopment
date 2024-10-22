@@ -30,7 +30,6 @@ fetch(url)
                 <p><b>Region: </b>${country.region}</p>
                 <p><b>Capital: </b>${country.capital}</p>
                 </div>`;
-                console.log(country.capital);
                 
       countryCard.innerHTML = cardHTML;
       countriesContainer.append(countryCard);

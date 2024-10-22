@@ -1,7 +1,8 @@
 const countriesContainer = document.querySelector(".countries-container");
 
 const filterByName = document.querySelector(".filter-by-name")
-
+const searchInput = document.querySelector("#search-bar")
+const changeTheme = document.querySelector(".theam-changer")
 const url = "https://restcountries.com/v3.1/all";
 
 // async function countryData() {
@@ -15,11 +16,16 @@ const url = "https://restcountries.com/v3.1/all";
 // }
 // countryData();
 
+let allCountries 
+
 fetch(url)
   .then((response) => {
     return response.json();
   })
-  .then(renderCountries)
+  .then((data)=>{
+    renderCountries(data)
+    allCountries=data
+  })
   .catch((error) => {
     console.log(error);
   });
@@ -37,6 +43,7 @@ fetch(url)
     
   })
 
+  
   function renderCountries(data){
     countriesContainer.innerHTML = ''
     data.forEach((country) => {
@@ -57,3 +64,15 @@ fetch(url)
       
     })
   }
+
+  searchInput.addEventListener('input',(e)=>{
+   
+    const list= allCountries.filter((country) =>country.name.common.toLowerCase().includes(e.target.value.toLowerCase()))
+    renderCountries(list)
+    
+    
+  })
+
+  changeTheme.addEventListener("click",()=>{
+    document.body.classList.toggle('dark')
+  })

@@ -3,22 +3,37 @@
 }
 
 body{
+    --background-color: white;
+    --text-color: black;
+    --elements-color:white;
     margin: 0;
     padding: 0;
     font-family: "Nunito Sans", sans-serif;
     font-style: normal;
+    background-color: var(--background-color);
+    color: var(--text-color);
+   
+}
+body.dark{
+    --background-color: hsl(207,26%,17%);
+    --text-color: white;
+    --elements-color:hsl(209,23%,22%);
+    
 }
 
 a{
     text-decoration: none;
     color: inherit;
 }
+
 .title{
     font-weight: 800;
 }
 .header{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     padding-inline: 24px;
+    background-color: var(--elements-color);
+
 }
 .header-content{ 
     max-width: 1200px;
@@ -26,6 +41,9 @@ a{
     align-items: center;
     justify-content: space-between;
     margin-inline: auto;
+}
+.theam-changer{
+cursor: pointer;
 }
 main{
     padding: 24px;
@@ -51,6 +69,9 @@ justify-content: space-between;
     outline: none;
     border: 0;
     padding: 16px;
+    width: 92%;
+    background-color: var(--elements-color);
+    color: var(--text-color);
 }
 .filter-by-name{
     width: 150px;
@@ -59,6 +80,8 @@ justify-content: space-between;
     border: none;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 6px;
+    background-color: var(--elements-color);
+    color: var(--text-color);
 }
 .countries-container{
     max-width: 1200px;
@@ -76,6 +99,7 @@ justify-content: space-between;
     padding-bottom: 18px;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
+    background-color: var(--elements-color);
 }
 .country-card:hover{
 transform: scale(1.02);

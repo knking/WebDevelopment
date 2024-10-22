@@ -19,25 +19,7 @@ fetch(url)
   .then((response) => {
     return response.json();
   })
-  .then((data) => {
-    data.forEach((country) => {
-      const countryCard = document.createElement("a");
-      countryCard.classList.add("country-card");
-      countryCard.href=`./country.html?name=${country.name.common}`
-      const cardHTML = ` 
-                <img src="${country.flags.svg}" alt="flag">
-                <div class="card-text">
-                <h3 class="card-title">${country.name.common}</h3>
-                <p><b>Population: </b>${(country.population).toLocaleString('en-IN')}</p>
-                <p><b>Region: </b>${country.region}</p>
-                <p><b>Capital: </b>${country.capital}</p>
-                </div>`;
-                
-      countryCard.innerHTML = cardHTML;
-      countriesContainer.append(countryCard);
-      
-    });
-  })
+  .then(renderCountries)
   .catch((error) => {
     console.log(error);
   });
@@ -48,9 +30,15 @@ fetch(url)
   .then((response) => {
     return response.json();
   })
-  .then((data) => {
-    console.log(filterByName.value);
-    countriesContainer.innerHTML = ' '
+  .then(renderCountries)
+  .catch((error) => {
+    console.log(error);
+  });
+    
+  })
+
+  function renderCountries(data){
+    countriesContainer.innerHTML = ''
     data.forEach((country) => {
       const countryCard = document.createElement("a");
       countryCard.classList.add("country-card");
@@ -67,10 +55,5 @@ fetch(url)
       countryCard.innerHTML = cardHTML;
       countriesContainer.append(countryCard);
       
-    });
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-    
-  })
+    })
+  }

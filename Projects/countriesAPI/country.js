@@ -9,7 +9,9 @@ const native=document.querySelector(".native")
 const tld=document.querySelector(".tld")
 const currencies=document.querySelector(".currencies")
 const lan = document.querySelector(".lan")
-
+const first= document.querySelector(".firstB")
+const second= document.querySelector(".secondB")
+const third= document.querySelector(".thirdB")
 
 const countryName = new URLSearchParams(location.search).get("name");
 
@@ -34,7 +36,9 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
     currencies.innerText = Object.values(country.currencies)[0].name
     lan.innerText=Object.values(country.languages)[0]
     console.log(Object.values(country.languages)[0]);
-
+    first.innerText = country.borders[0]
+    second.innerText = country.borders[1]
+    third.innerText = country.borders[2]
     
     // data.forEach((country) => {
 

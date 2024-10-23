@@ -75,4 +75,12 @@ fetch(url)
 
   changeTheme.addEventListener("click",()=>{
     document.body.classList.toggle('dark')
+    
+    if(changeTheme.innerText.trim() =='Dark mode'){
+      changeTheme.innerText = 'Light mode'
+      return
+    }
+    if(changeTheme.innerText.trim() =='Light mode'){
+      changeTheme.innerText ='Dark mode'
+    }
   })

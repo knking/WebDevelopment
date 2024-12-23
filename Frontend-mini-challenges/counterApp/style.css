@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px gray;
+
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn{
+    background-color: rgb(15, 229, 229);
+}
+.num{
+    font-size: 30px;
+}
+.btn-size{
+    padding:15px 20px ;
+}
+.reset{
+    padding:15px 40px ;
+}
+span{
+    font-size: 18px;
+    font-weight: 500;
+}
+span input{
+    width: 100px;
+    height: 30px;
+}

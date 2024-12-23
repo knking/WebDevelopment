@@ -19,5 +19,19 @@ main{
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-    gap: 10px;
+    gap: 14px;
+}
+.heading{
+    font-size: 20px;
+}
+.btn{
+    padding: 10px;
+    background-color: rgb(204, 239, 204);
+}
+
+input{
+    height: 30px;
+}
+.hide{
+    display: none;
 }

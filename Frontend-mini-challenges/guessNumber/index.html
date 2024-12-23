@@ -12,15 +12,16 @@
       <h1>Guess The Number</h1>
     </nav>
     <main>
-      <p>Enter a guess between 0 to 100</p>
-      <input type="number" name="num" id="number" />
+      <p class="heading">Enter a guess between 0 to 100</p>
+      <input type="number" name="num" id="inputVal" placeholder="Enter a Number" />
       <div>
-        <button>Submit</button>
-        <button>Start The Game</button>
+        <button class="btn submit">Submit</button>
+        <button class="btn start">Start The Game</button>
       </div>
-      <p>Too Low!</p>
-      <p>Too High!</p>
-      <h3>Your Guessess:</h3>
+      <p class="low hide">Too Low!</p>
+      <p class="high hide">Too High!</p>
+      <p class="got hide">You Got it! Congrats</p>
+      <h3 class="guess">Your Guessess:</h3>
     </main>
   </body>
 </html>

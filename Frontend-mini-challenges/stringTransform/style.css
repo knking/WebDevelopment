@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px gray;
+
+}
+/* body{
+    text-align: center;
+} */
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+input{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+.output{
+font-size: 1.2rem;
+margin: 1.5rem 0;
+padding: 1.5rem;
+background-color: beige;
+position: relative;
+}
+.output label{
+    font-size: 1rem;
+    position: absolute;
+    left: 16px;
+    top: -5px;
+    background-color: black;
+    color: white;
+}

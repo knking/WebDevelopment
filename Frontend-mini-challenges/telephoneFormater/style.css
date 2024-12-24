@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px gray;
+
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px;
+}
+.main-section input{
+    margin: 20px 0;
+    width: 250px;
+    padding: 0 2px;
+    height: 30px;
+    font-size: 1.5rem;
+}

@@ -16,6 +16,7 @@
 /* body{
     text-align: center;
 } */
+
 main{
     max-width: 1200px;
     margin: 0 auto;
@@ -29,7 +30,7 @@ input{
     font-size: 1rem;
 }
 .output{
-font-size: 1.2rem;
+font-size: 1rem;
 margin: 1.5rem 0;
 padding: 1.5rem;
 background-color: beige;

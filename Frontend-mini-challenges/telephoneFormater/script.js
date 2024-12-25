@@ -1,20 +1,21 @@
 
 const inputval = document.querySelector(".main-section input")
 
-let count = 0
-let ans =''
-let tmp = ''
+let previousValue = ''
+let firstThreeNum =''
 inputval.addEventListener('input',()=>{
-count++
-tmp+=inputval.value
-ans=tmp
-tmp=""
-if(count === 3){
-ans = `+(${ans})-`
-}
-if(count > 3){
-    ans = `+(${ans})-`, ans
-}
-console.log(ans);
+    const val = inputval.value
 
-})
+    if(/\d+$/g.test(val)){
+        inputval.value = val
+    }else{
+        return
+    }
+    if(val.length === 4 && previousValue.length < val.length){
+        firstThreeNum = val.substring(0,3)
+        inputval.value = `+(${firstThreeNum}) - ${val[val.length-1]}`
+    }else if(val.length === 9 && previousValue.length > val.length){
+        inputval.value =firstThreeNum
+    }
+    previousValue = val
+    })

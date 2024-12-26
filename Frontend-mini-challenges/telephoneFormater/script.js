@@ -9,7 +9,7 @@ inputval.addEventListener('input',()=>{
     if(/\d+$/g.test(val)){
         inputval.value = val
     }else{
-        return
+        inputval.value=val.substring(0,val.length-1)
     }
     if(val.length === 4 && previousValue.length < val.length){
         firstThreeNum = val.substring(0,3)

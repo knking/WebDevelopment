@@ -1,0 +1,41 @@
+*{
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px gray;
+    margin-bottom: 20px;
+
+}
+.main{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-size: 4rem;
+}
+h1 span{
+    color: brown;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+span::after{
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 55px;
+    background-color: brown;
+    margin-left: 4px;
+}

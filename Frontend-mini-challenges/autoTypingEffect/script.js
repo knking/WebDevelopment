@@ -72,6 +72,6 @@ function autoType(arr,element){
   
 }
 
-autoType(list1,span2)
+autoType(list1,span)
 
 // autoType(list2,span)

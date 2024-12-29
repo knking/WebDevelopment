@@ -30,7 +30,7 @@ function getMeme(){
     .then((data)=>{
         const {author, title, url} = data
         memetitle.innerText =  title
-        memeauthor.innerText = author
+        memeauthor.innerText = `Meme by ${author}`
         memeimage.src=`${url}`
     })
     .catch((e)=>{

@@ -1,14 +1,16 @@
-*{
-    
+* {
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     text-align: center;
     font-family: sans-serif;
 }
-.navbar{
+
+.navbar {
     display: flex;
     height: 70px;
     display: flex;
@@ -18,45 +20,111 @@ body{
     margin-bottom: 20px;
 
 }
-.main{
+
+.main {
     display: flex;
     flex-direction: column;
     max-width: 400px;
     margin-inline: auto;
     gap: 16px;
 }
-select,input,button{
+
+select,
+input,
+button {
     font: inherit;
     padding: 8px;
 }
-button{
+
+button {
     cursor: pointer;
 }
-.duration-container{
+
+.duration-container {
     display: flex;
     align-items: center;
 }
-#duration{
+
+#duration {
     flex-grow: 1;
 }
-.tost-container{
+
+.tost-container {
     position: absolute;
     display: flex;
     flex-direction: column;
     top: 1rem;
-    left: 1rem;
+    left: 0rem;
     gap: 0.5rem;
+    overflow: hidden;
+    padding: 0 1rem;
 }
+
 /* .tost + .tost{
     margin-top: 12px;
 } */
-.tost{
+.tost {
     padding: 0.5rem;
     background-color: #00b300;
     color: white;
     border-radius: 0.25rem;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    animation: fromLeft 0.1s ease-in;
+    overflow: hidden;
 }
+
+.tost.goLeft {
+    animation: toLeft 0.1s ease-in forwards;
+}
+.tost-container.right .tost {
+    animation: fromRight 0.1s ease-in;
+}
+
+.tost-container.right .tost.goRight {
+    animation: toRight 0.1s ease-in forwards;
+}
+
+
+@keyframes fromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes toLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes toRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 .tost.success::before {
     content: '✓';
 }
@@ -72,6 +140,7 @@ button{
 .tost.info::before {
     content: 'ⓘ';
 }
+
 .tost.success {
     background-color: #009600;
 }
@@ -87,15 +156,17 @@ button{
 .tost.info {
     background-color: #4e4e4e;
 }
-.tost span{
+
+.tost span {
     cursor: pointer;
 }
 
-.tost-container.right{
+.tost-container.right {
     left: auto;
     right: 1rem;
 }
-.tost-container.bottom{
+
+.tost-container.bottom {
     top: auto;
     bottom: 1rem;
 }

@@ -43,6 +43,8 @@ button{
     position: absolute;
     display: flex;
     flex-direction: column;
+    top: 1rem;
+    left: 1rem;
     gap: 0.5rem;
 }
 /* .tost + .tost{
@@ -54,4 +56,46 @@ button{
     color: white;
     border-radius: 0.25rem;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+.tost.success::before {
+    content: '✓';
+}
+
+.tost.error::before {
+    content: '✗';
+}
+
+.tost.warning::before {
+    content: '⚠';
+}
+
+.tost.info::before {
+    content: 'ⓘ';
+}
+.tost.success {
+    background-color: #009600;
+}
+
+.tost.error {
+    background-color: #ff0000;
+}
+
+.tost.warning {
+    background-color: #ec6b03;
+}
+
+.tost.info {
+    background-color: #4e4e4e;
+}
+.tost span{
+    cursor: pointer;
+}
+
+.tost-container.right{
+    left: auto;
+    right: 1rem;
+}
+.tost-container.bottom{
+    top: auto;
+    bottom: 1rem;
 }

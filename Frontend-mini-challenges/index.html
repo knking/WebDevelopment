@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <style>
+        .main{
+            display: flex;
+            margin: 0 auto;
+            max-width: 1000px;
+            justify-content: space-between;
+            margin-top: 4rem;
+            align-items: center;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="basket1">
+        <p class="apple-1">10</p>
+        <p class="tokri-1">Basket -2</p>
+        </div>
+        <button class="right"> > </button>
+        <button class="left"> < </button>
+        <div class="basket2">
+            <p class="apple-2">0</p>
+            <p class="tokri-2">Basket -2</p>
+            </div>
+    </div>
+    <script>
+        const apl1 = document.querySelector(".apple-1")
+        const apl2 = document.querySelector(".apple-2")
+        const btnleft = document.querySelector(".left")
+        const btnright = document.querySelector(".right")
+        
+        let temp=1
+        btnright.addEventListener('click',()=>{
+            if(parseInt(apl1.innerText) ){
+                apl1.innerText = parseInt(apl1.innerText) -temp
+                apl2.innerText =parseInt(apl2.innerText)+ temp
+            }  
+        })
+
+        btnleft.addEventListener('click',()=>{
+            if(parseInt(apl2.innerText) ){
+                apl2.innerText = parseInt(apl2.innerText) -temp
+                apl1.innerText =parseInt(apl1.innerText)+ temp
+            }  
+        })
+    </script>
+</body>
+</html>

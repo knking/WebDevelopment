@@ -1,21 +1,12 @@
+import React from 'react'
+import AppleCounter from '../Components/AppleCounter'
 
-import './App.css'
-
-
-function Header(){
-  return(
+function App() {
+  return (
     <div>
-<p>i am first para</p>
+        <AppleCounter/>
     </div>
   )
 }
 
-function App() {
-  return (
-    <>
-     <h1>I am First react app</h1>
-    </>
-  )
-}
-
-export  {App, Header}
+export default App

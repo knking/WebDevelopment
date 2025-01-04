@@ -9,3 +9,9 @@ section{
 button img{
     max-width: 40px;
 }
+.counterSection{
+    /* width: 200px;
+    height: 200px;
+    margin-inline: auto; */
+    text-align: center;
+}

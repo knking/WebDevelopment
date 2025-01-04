@@ -1,8 +1,8 @@
 
-const Button = ({imageUrl,myTitle})=>{
+const Button = ({imageUrl,myTitle,clickHandler})=>{
     return(
         <>
-        <button title={myTitle}> 
+        <button title={myTitle} onClick={clickHandler}> 
             <img src={imageUrl} alt="btn-image" />
         </button>
         </>

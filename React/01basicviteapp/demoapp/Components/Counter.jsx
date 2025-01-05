@@ -17,7 +17,12 @@ const Counter =  ()=>{
         <h1>{count}</h1>
         <button onClick={increase}>Increase Count</button>
         <button onClick={()=>{
-            setCount(count-1)
+            
+        setCount(count-1)
+        // setCount((previous)=>previous+1)
+        // setCount((previous)=>previous+1)
+        // setCount((previous)=>previous+1)
+           
         }}>Decrease Count</button>
         </div>
         

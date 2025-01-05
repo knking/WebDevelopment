@@ -5,28 +5,48 @@ import leftArrow from "../src/assets/arrow.png";
 import AppleBasket from "./AppleBasket";
 import "./AppleCounter.css";
 import { createRoot } from "react-dom/client";
+import { useState } from "react";
 
-const root = createRoot(document.getElementById("root")) 
-    let appleCount =10
-    let rightAppleCount=0
-    let leftAppleCount = appleCount-rightAppleCount
+// const root = createRoot(document.getElementById("root"))
+
 const AppleCounter = () => {
+  let appleCount = 10;
 
-  const leftClickHandler = () => {
-    root.render(<AppleCounter/>)
-    leftAppleCount++
-    rightAppleCount--
-    console.log(rightAppleCount);
-    
-  };
+  //let leftAppleCount = appleCount-rightAppleCount
 
-  const rightClickHandler = () => {
-    root.render(<AppleCounter/>)
-    leftAppleCount--
-    rightAppleCount++
-    console.log(leftAppleCount);
-    
-  };
+  const [rightAppleCount, setrightAppleCount] = useState(0);
+
+  const [leftAppleCount, setLeftAppleCount] = useState(
+    appleCount - rightAppleCount
+  );
+
+  function leftClickHandler() {
+    if (rightAppleCount > 0) {
+      setrightAppleCount(rightAppleCount - 1);
+      setLeftAppleCount(leftAppleCount + 1);
+    }
+  }
+
+  function rightClickHandler() {
+    if(leftAppleCount > 0){
+      setLeftAppleCount(leftAppleCount - 1);
+      setrightAppleCount(rightAppleCount + 1);
+      
+    }
+  }
+  // const leftClickHandler = () => {
+  //   // root.render(<AppleCounter/>)
+  //   leftAppleCount++
+  //     rightAppleCount--
+  //   console.log(rightAppleCount);
+  // };
+
+  // const rightClickHandler = () => {
+  //   // root.render(<AppleCounter/>)
+  //   leftAppleCount--
+  //   rightAppleCount++
+  //   console.log(leftAppleCount);
+  // };
   return (
     <>
       <section>

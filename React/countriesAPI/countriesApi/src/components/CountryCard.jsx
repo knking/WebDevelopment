@@ -1,17 +1,17 @@
 import React from "react";
 
-function CountryCard() {
+function CountryCard({name,imgUrl,population,region,capital}) {
   return (
-    <a href="/country.html?name=Barbados" className="country-card">
-      <img src="https://flagcdn.com/bb.svg" alt="barbados-flag" />
+    <a href={`/country.html?name=${name.common}`} className="country-card">
+      <img src={imgUrl} alt={name + 'flag'}/>
       <div className="card-text">
-        <h3 className="card-title">Barbados</h3>
+        <h3 className="card-title">{name}</h3>
         <p>
-          <b>Population: </b>23,45,666</p>
+          <b>Population: </b>{population}</p>
         <p>
-          <b>Region: </b>Americas</p>
+          <b>Region: </b>{region}</p>
         <p>
-          <b>Capital: </b>Bridgetown</p>
+          <b>Capital: </b>{capital}</p>
       </div>
     </a>
   );

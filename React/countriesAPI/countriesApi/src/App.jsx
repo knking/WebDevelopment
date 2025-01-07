@@ -6,17 +6,17 @@ import SelectMenu from "./components/SelectMenu";
 import CountriesList from "./components/CountriesList";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [query, setQuery] = useState('');
 
   return (
     <>
       <Header />
       <main>
         <div className="search-filter-container">
-          <SearchBar />
+          <SearchBar  setQuery = {setQuery}/>
           <SelectMenu />
         </div>
-        <CountriesList/>
+        <CountriesList query = {query}/>
       </main>
     </>
   );

@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CountriesData from "../CountriesData";
 import CountryCard from "./CountryCard";
 
 function CountriesList({query}) {
   
+
+//   const [countryData,setCountryData] = useState("")
+// useEffect(()=>{
+// fetch('https://restcountries.com/v3.1/all')
+// .then((res)=> res.json())
+// .then((data)=>{
+// setCountryData(countryData)
+// })
+// },[])
+
 
   return (
     <>

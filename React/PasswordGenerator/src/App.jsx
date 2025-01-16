@@ -21,8 +21,8 @@ function App() {
   }, [lenght, numberAllowed, charAllowed, setPassword]);
 
 useEffect(()=>{
-  // passwordGenerator()
-})
+ passwordGenerator()
+},[lenght,numberAllowed,charAllowed,passwordGenerator])
 
   return (
     <>
@@ -50,10 +50,14 @@ useEffect(()=>{
           />
           <label htmlFor="length">Length({lenght})</label>
 
-          <input type="checkbox" name="number" defaultChecked={numberAllowed}  onChange={(prev)=>!prev}/>
+          <input type="checkbox" name="number" defaultChecked={numberAllowed}  onChange={()=>{
+            setNumberAllowed((prev) => !prev)
+          }}/>
           <label htmlFor="number">Number</label>
 
-          <input type="checkbox" name="character" defaultChecked={charAllowed} onChange={(prev)=>!prev} />
+          <input type="checkbox" name="character" defaultChecked={charAllowed} onChange={()=>{
+            setCharAllowed((prev)=> !prev)
+          }} />
           <label htmlFor="character">Characters</label>
         </div>
       </div>

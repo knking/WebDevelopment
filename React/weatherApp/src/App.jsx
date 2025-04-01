@@ -5,6 +5,7 @@ import Button from "./components/Button";
 import { useWeather } from "./context/Weather";
 
 import "./App.css";
+import Text from "./components/Text";
 
 function App() {
   const weather = useWeather();
@@ -22,6 +23,7 @@ function App() {
       <Button onClick={weather.fetchData} value="Search" />
       <Card />
       <Button value="Refresh" />
+      <Text/>
     </div>
   );
 }

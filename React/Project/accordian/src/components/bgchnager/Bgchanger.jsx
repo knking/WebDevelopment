@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 function Bgchanger() {
   const [color, setcColor] = useState(null);
 
- const [typeOfColor, setTypeOfColor] =useState("white")
+ const [typeOfColor, setTypeOfColor] =useState("#000000")
 
 function generateRBG(){
   let one=0
@@ -52,11 +52,12 @@ else{
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
       <div className="flex gap-2 mb-10">
+      <button className="py-2 px-4 bg-amber-100" onClick={()=>setTypeOfColor('rgb')} >Generate RGB color</button>
+      <button className="py-2 px-4 bg-amber-100 " onClick={()=>setTypeOfColor('hex')} >Generate HEX color</button>
         <button className="py-2 px-4 bg-amber-100" onClick={typeOfColor === 'hex' ? generateHex : generateRBG} >
           Generate random color
         </button>
-        <button className="py-2 px-4 bg-amber-100" onClick={()=>setTypeOfColor('rgb')} >Generate RGB color</button>
-        <button className="py-2 px-4 bg-amber-100 " onClick={()=>setTypeOfColor('hex')} >Generate HEX color</button>
+        
       </div>
       <div className="mt-20">
         <h1 className="text-2xl" >Hex code</h1>

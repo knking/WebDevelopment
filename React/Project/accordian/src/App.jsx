@@ -6,6 +6,9 @@ import Bgchanger from './components/bgchnager/Bgchanger'
 import StarRating from './components/star-rating/StarRating'
 import ImageSlider from './components/image-slider/ImageSlider'
 import LoadMoreData from './components/load-more-data/LoadMoreData'
+import NavMenu from './components/side-menu/NavMenu'
+import navData from './components/side-menu/navData'
+import QrcodeGenerator from './components/qr-code-generator/QrcodeGenerator'
 
 
 function App() {
@@ -16,7 +19,9 @@ function App() {
    {/* <Bgchanger/> */}
    {/* <StarRating/> */}
    {/* <ImageSlider/> */}
-   <LoadMoreData/>
+   {/* <LoadMoreData/> */}
+   {/* <NavMenu menus={navData}/> */}
+   <QrcodeGenerator/>
    </>
   )
 }

@@ -19,7 +19,16 @@ const navData = [
       "icon": "settings",
       "path": "/settings",
       "submenu": [
-        { "title": "Profile", "path": "/settings/profile" },
+        { "title": "Profile", "path": "/settings/profile",
+          "submenu":[
+            {
+              "title":"city",
+              
+            }
+
+           
+          ]
+         },
         { "title": "Preferences", "path": "/settings/preferences" },
         { "title": "Security", "path": "/settings/security" }
       ]

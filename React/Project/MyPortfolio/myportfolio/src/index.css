@@ -8,6 +8,20 @@ color: #f3f4f6;
 }
 
 @layer utilities{
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .animate-blink{
+        animation: blink 0.8s step-end infinite ;
+    }
+
     @keyframes loading {
         0% {
             transform: translateX(-100%);

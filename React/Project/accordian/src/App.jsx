@@ -9,6 +9,7 @@ import LoadMoreData from './components/load-more-data/LoadMoreData'
 import NavMenu from './components/side-menu/NavMenu'
 import navData from './components/side-menu/navData'
 import QrcodeGenerator from './components/qr-code-generator/QrcodeGenerator'
+import DarkLight from './components/dark-light/DarkLight'
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
    {/* <ImageSlider/> */}
    {/* <LoadMoreData/> */}
    {/* <NavMenu menus={navData}/> */}
-   <QrcodeGenerator/>
+   {/* <QrcodeGenerator/> */}
+   <DarkLight/>
    </>
   )
 }

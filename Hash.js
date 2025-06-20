@@ -9,16 +9,30 @@
 
 // console.log(myArr);
 
- let str = 'defghij'
+//  let str = 'defghij'
 
 // console.log(str.charCodeAt(0)- 'a'.charCodeAt(0));
 
 // console.log('a'.charCodeAt(0));
 
-let hash = new Array(6).fill(0)
+// let hash = new Array(6).fill(0)
 
-for(let i=0;i<7;i++){
-    hash[str[i].charCodeAt(0)- 'a'.charCodeAt(0)]++
-}
+// for(let i=0;i<7;i++){
+//     hash[str[i].charCodeAt(0)- 'a'.charCodeAt(0)]++
+// }
 
-console.log(hash);
+// console.log(hash);
+
+
+const promiseOne = new Promise(function(resolve,reject){
+
+  setTimeout(()=>{
+    resolve()
+    console.log("Async task completed");
+        
+    },2000)
+})
+
+promiseOne.then(()=>{
+    console.log("Promise Consumed")
+})

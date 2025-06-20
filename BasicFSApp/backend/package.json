@@ -1,0 +1,15 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "basic app for learning",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start":"node server.js"
+  },
+  "author": "krishna",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
